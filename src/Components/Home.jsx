@@ -11,7 +11,7 @@ const Home = () => {
           section Home{' '}
         </h2>
       </div>
-      <hr className="border-2 border-dashed border-pink-400 my-10" />
+      <hr className="border-1 border-dashed border-pink-400 my-10 container mx-auto" />
       <Outlet></Outlet>
     </div>
   );
