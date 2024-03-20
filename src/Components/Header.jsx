@@ -27,6 +27,10 @@ const Header = () => {
                     {' '}
                     <Link to="/users">Users</Link>
                   </button>
+                  <button className="btn ">
+                    {' '}
+                    <Link to="/services">Services</Link>
+                  </button>
                 </div>
                 <div className="md:hidden">
                   <button className="text-white focus:outline-none">
