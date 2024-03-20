@@ -1,7 +1,14 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 const Post = ({ post }) => {
   console.log(post, 'coming from post');
-  const { body, title } = post;
+  const { body, title, id } = post;
+
+  const navigate = useNavigate();
+
+  const handleDetails = () => {
+    navigate(`/posts/${id}`);
+  };
 
   return (
     <div className="mx-auto bg-gradient-to-r from-purple-100 via-pink-100 to-red-50 rounded-lg overflow-hidden shadow-xl">
@@ -14,7 +21,12 @@ const Post = ({ post }) => {
           <p className="text-lg ">{body}</p>
         </div>
         <div className="border w-full">
-          <button className="btn w-fit btn-primary mt-3">Post details</button>
+          <button
+            onClick={handleDetails}
+            className="btn w-fit btn-primary mt-3"
+          >
+            Post details
+          </button>
         </div>
       </div>
     </div>
