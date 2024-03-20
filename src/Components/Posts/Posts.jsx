@@ -6,8 +6,8 @@ const Posts = () => {
   console.log(posts);
 
   return (
-    <div className="bg-yellow-100  container mx-auto rounded-lg">
-      <h3 className="text-2xl uppercase font-bold text-center p-10">
+    <div className="container mx-auto rounded-lg shadow-md p-5">
+      <h3 className="text-2xl uppercase font-bold text-center p-10 bg-yellow-100 my-3 shadow-lg ">
         {' '}
         total Post <span>{posts.length}</span>{' '}
       </h3>
@@ -15,7 +15,7 @@ const Posts = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-5">
         {posts.map(post => (
-          <Post key={post.id} post={post} ></Post>
+          <Post key={post.id} post={post}></Post>
         ))}
       </div>
     </div>
