@@ -1,11 +1,20 @@
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const PostDetails = () => {
+  const navigate = useNavigate();
   const singlePost = useLoaderData();
   const { body, title, id } = singlePost;
+  const handleForword = () => {
+    navigate(-1);
+  };
 
   return (
     <div className="container mx-auto bg-blue-50">
+      <div className="py-6">
+        <button onClick={handleForword} className="btn btn-info btn-outline">
+          Go Back
+        </button>
+      </div>
       <h3 className="text-center text-3xl font-bold uppercase text-purple-600 p-5">
         post details
       </h3>

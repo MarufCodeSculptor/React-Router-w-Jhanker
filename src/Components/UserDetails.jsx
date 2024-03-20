@@ -89,6 +89,8 @@ const UserDetails = () => {
           </tbody>
         </table>
       </div>
+
+      
     </div>
   );
 };
